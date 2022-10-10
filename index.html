@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> CHECK DATA TYPE: FUNCTION IS checkDataType</h1>
+</body>
+<script>
+    function checkDataType(inputVal){
+        try{
+        const y=typeof(inputVal);
+        if(inputVal===null || inputVal===undefined){
+            throw new TypeError("THIS IS INVALID DATA");
+        }
+        else if(y==='number'){
+            document.write(y);
+            console.log(y);
+        }
+        else if(y==='string'){
+            document.write(y);
+            console.log(y);
+        }
+        else if(y==='boolean'){
+            document.write(y);
+            console.log(y);
+        }
+        
+        else if(Array.isArray(inputVal)){
+            document.write("Array");
+            console.log("Array");
+        }
+        else if(y==='object'){
+            document.write(y);
+            console.log(y);
+        }
+        else if(typeof(inputVal)==="undefined"){
+            document.write("Undefined");
+            console.log("Undefined");
+        }
+        else if(y==='function'){
+            document.write(y);
+            console.log(y);
+        }
+
+        }
+        catch(err){
+            console.log(err);
+        }
+        
+
+    }
+
+    
+       
+    
+
+</script>
+</html>
